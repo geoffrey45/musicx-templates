@@ -1,0 +1,23 @@
+.top-artist {
+    margin-left: 20px;
+    /* border: solid 1px #ccc; */
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    float: left;
+}
+
+.artist-image {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 20%;
+    background-image: url(./aha.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.artist-name {
+    margin-top: 5px;
+}

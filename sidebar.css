@@ -1,0 +1,50 @@
+.button a{
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px rgb(48, 48, 48);
+}
+.button a i {
+    margin-right: 10px;
+}
+#home-button {
+    top: 0px;
+    width: 100%;
+    border-top: solid 1px rgb(48, 48, 48);
+}
+#now-playing-album-art {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    background-image: url('./album.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0 !important;
+}
+.folder-item {
+    text-align: left;
+    margin: 10px;
+    color: #fff;
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 4px;
+    font-size: 14px;
+}
+.folder-item a {
+    color: #fff;
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}

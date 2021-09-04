@@ -1,0 +1,204 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.1fr 2.2fr repeat(2, 1fr);
+    grid-template-rows: 0.1fr 1.7fr 2fr 0.1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+        "top top top top"
+        "side content content content"
+        "side content content content"
+        "bottom bottom bottom bottom";
+}
+
+.top {
+    display: grid;
+    grid-area: top;
+    height: 70px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: bottom;
+    height: 80px;
+    background-color: #0c0c0c75;
+}
+@media screen and (max-width: 650px) {
+    .bottom {
+        height: 150px;
+        display: block;
+    }
+    .side {
+        display: none;
+    }
+}
+.side {
+    background-color: #0c0c0c75;
+    grid-area: side;
+    width: 200px;
+}
+
+.content {
+    grid-area: content;
+    background-image:  url("./g&gr.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.top-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+        "Top-left Search Top-right";
+    background-color: #0c0c0c75;
+}
+
+.Search { 
+    grid-area: Search;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Top-left { grid-area: Top-left; }
+
+.Top-right { grid-area: Top-right; }
+
+.sidebar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1.9fr 0.1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+        "menu"
+        "context"
+        "album-art";
+    height: 100%;
+}
+  
+.album-art {
+    grid-area: album-art;
+    height: 200px;
+    border-top: 1px solid rgb(51, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.context {
+    grid-area: context;
+    overflow-x: hidden;
+    /* background-color: tomato; */
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 3fr auto;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+      "album-of-the-day album-of-the-day extra"
+      "explorer explorer extra";
+    height: 100%;
+    backdrop-filter: blur(50px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+  }
+.extra {
+    grid-area: extra;
+    height: 100%;
+    border: solid;
+}
+.album-of-the-day {
+    grid-area: album-of-the-day;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.explorer {
+    grid-area: explorer;
+    height: 100%;
+}
+.album-of-the-day-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 1.5fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+      "detail detail artist";
+    height: 100%;
+    width: 100%;
+}
+
+.artist { 
+    grid-area: artist;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* border: solid; */
+}
+  
+  .detail { grid-area: detail;
+    /* border: solid; */
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1.2fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: stretch;
+    grid-template-areas:
+      "list list stuff"
+      "list list stuff"
+      "top-artists top-artists top-artists";
+    height: 100%;
+  }
+  
+  .list { grid-area: list; }
+  
+  .top-artists {
+    grid-area: top-artists;
+    /* border: solid; */
+    height: 170px;
+}
+  
+.stuff { grid-area: stuff; }
+  

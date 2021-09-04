@@ -1,0 +1,101 @@
+#album-of-the-day {
+    color: rgb(228, 228, 228);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: .7em;
+    margin-left: 20px;
+    text-transform: capitalize;
+    border-left: solid 2px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+#album-art-of-the-day {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    /* background-color: tomato; */
+    border-radius: 20px;    
+    background-image: url(./Goodbye_&_Good_Riddance_Album_Cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0px 0px 4px 4px #00000041;
+}
+
+#artist-image {
+    width: 300px;
+    height: 200px;
+    background-image: url(./5792.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 4px 4px #00000041;
+}
+#album-title-of-the-day {
+    font-size: 3.5em;
+    font-weight: 1000;
+    margin-left: 20px;
+    text-transform: capitalize;
+    /* border: solid; */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#album-artist-of-the-day {
+    font-size: 1.5em;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#song-count {
+    font-size: .7em;
+    color: rgb(194, 194, 194);
+}
+
+#album-of-the-day-button {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#album-of-the-day-button a {
+    background-color: rgb(13, 86, 180);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 30px;
+}
+
+#add-to-favorites{
+    background-color: rgb(255, 255, 255) !important;
+    border-radius: 100px !important;
+}
+
+@media screen and (max-width: 1200px) {
+    /* body {
+        display: none;
+    } */
+   #album-title-of-the-day {
+        font-size: 1.5em;
+   }
+   .extra {
+       display: none;
+   }
+   #album-art-of-the-day {
+        width: 100px;
+        height: 100px;
+   }
+   #artist-image {
+       width: 200px;
+       height: 100px;
+   }
+   .home-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "album-of-the-day album-of-the-day"
+      "explorer explorer";
+  }
+}
