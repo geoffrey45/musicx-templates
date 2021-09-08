@@ -1,18 +1,26 @@
+#top-artists {
+    position: absolute;
+    left: 0;
+    margin-top: 40px;
+}
+
 .top-artist {
     margin-left: 20px;
-    /* border: solid 1px #ccc; */
+    /* border: solid 1px rgb(46, 46, 46); */
     width: 100px;
     text-align: center;
     font-weight: bold;
+    font-size: .7em;
     float: left;
+    padding-top: 10px;
+    /* left: 0; */
 }
-
 .artist-image {
     width: 100px;
     height: 100px;
-    background-color: #fff;
+    background-color: #111013;
     border-radius: 20%;
-    background-image: url(./aha.jpg);
+    background-image: url(./album.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,4 +28,13 @@
 
 .artist-name {
     margin-top: 5px;
+    color: #fff;
+}
+
+.top-artists .card-header {
+    color: #fff;
+    margin-bottom: 0;
+    bottom: 150px;
+    left: 0px !important;
+    position: absolute;
 }

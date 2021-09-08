@@ -1,0 +1,59 @@
+.now-playing {
+    font-weight: bolder !important;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #111013;
+    padding: 20px;
+    border-radius: 20px !important;
+    color: #fff;
+}
+.top-songs .card-header {
+    color: #fff;
+}
+td {
+    border-bottom: 1px solid #6868687e;
+    text-align: left;
+    padding: 8px;
+}
+
+.table-header {
+    font-weight: bolder;
+    height: 40px;
+    text-align: left;
+}
+
+.top-artists {
+    display: inline-flex;
+    background-color: #111013;
+}
+.with-image {
+    display: flex;
+    align-items: center;
+}
+.with-image .title-and-album p {
+    margin: 5px;
+    font-weight: bold;
+}
+.with-image .title-and-album .small {
+    font-size: 0.8em;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+#top-song-img {
+    width: 50px;
+    height: 50px;
+    background-image: url(./album.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+@media screen and (max-width: 600px) {
+    
+}

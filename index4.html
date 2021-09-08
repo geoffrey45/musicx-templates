@@ -13,10 +13,51 @@
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="album-of-the-day.css">
     <link rel="stylesheet" href="home-top-artists.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./top-tracks.css">
+    <link rel="stylesheet" href="./artist-of-the-day.css">
+    <link rel="stylesheet" href="./know-your-artists.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 </head>
 
 <body>
+    <style>
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(./fonts/MaterialIconsRound-Regular.woff);
+            /* For IE6-8 */
+            src: local('Material Icons'),
+                local('MaterialIcons-Regular'),
+                url("./fonts/MaterialIconsRound-Regular.woff") format('woff'),
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+    </style>
     <div class="container">
         <div class="top">
             <div class="top-grid">
@@ -107,25 +148,64 @@
                     <span class="folder-item"> <a href="">100% Sad tape</a> </span>
                     <span class="folder-item"> <a href="">Come over when you're sober</a> </span>
                     <span class="folder-item"> <a href="">The new sounds of the 80s</a> </span>
-                    <span class="folder-item"> <a href="">100% Nyashinski</a> </span><span class="folder-item"> <a href="">lil peep</a> </span>
+                    <span class="folder-item"> <a href="">100% Nyashinski</a> </span><span class="folder-item"> <a
+                            href="">lil peep</a> </span>
                     <span class="folder-item"> <a href="">Juice Wrld</a> </span>
                     <span class="folder-item"> <a href="">100% Sad tape</a> </span>
                     <span class="folder-item"> <a href="">Come over when you're sober</a> </span>
                     <span class="folder-item"> <a href="">The new sounds of the 80s</a> </span>
-                    <span class="folder-item"> <a href="">100% Nyashinski</a> </span><span class="folder-item"> <a href="">lil peep</a> </span>
+                    <span class="folder-item"> <a href="">100% Nyashinski</a> </span><span class="folder-item"> <a
+                            href="">lil peep</a> </span>
                     <span class="folder-item"> <a href="">Juice Wrld</a> </span>
                     <span class="folder-item"> <a href="">100% Sad tape</a> </span>
                     <span class="folder-item"> <a href="">Come over when you're sober</a> </span>
                     <span class="folder-item"> <a href="">The new sounds of the 80s</a> </span>
                     <span class="folder-item"> <a href="">100% Nyashinski</a> </span>
                 </div>
-              </div>
+            </div>
             <!-- <div id="sidebar-header">
                 <h3>cwilvx music</h3>
             </div> -->
         </div>
         <div class="content">
             <div class="home-grid">
+                <div class="top-artists">
+                    <p class="card-header">Top Artists</p>
+                    <div id="top-artists">
+                        <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">Lil Peep</div>
+                        </div>
+                        <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">A-ha</div>
+                        </div>
+                        <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">Juice Wrld</div>
+                        </div>
+                        <!-- <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">Trippie Redd</div>
+                        </div>
+                        <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">Bobby Shmarda</div>
+                        </div>
+                        <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">Juice Wrld</div>
+                        </div>
+                        <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">Trippie Redd</div>
+                        </div>
+                        <div class="top-artist">
+                            <div class="artist-image"></div>
+                            <div class="artist-name">Bobby Shmarda</div>
+                        </div> -->
+                    </div>
+                </div>
                 <div class="album-of-the-day">
                     <div class="album-of-the-day-grid">
                         <div class="artist">
@@ -133,48 +213,171 @@
                             <div id="artist-image"></div>
                         </div>
                         <div class="detail">
-                            <p id="album-of-the-day">Album of the day</p>
-                            <p id="album-title-of-the-day">Goodbye & Good Ridance</p>
-                            <a href="#" id="album-artist-of-the-day">Juice Wrld <span id="song-count">24 songs</span></a>
+                            <p class="card-header">Album of the day</p>
+                            <p id="album-title-of-the-day">Goodbye & Good Riddance</p>
+                            <a href="#" id="album-artist-of-the-day">Juice Wrld <span id="song-count">24
+                                    songs</span></a>
                             <div id="album-of-the-day-button">
                                 <a href="#">Listen now</a>
                                 <a id="add-to-favorites" href="#">💙</a>
                             </div>
                         </div>
-                        
-                      </div>
+
+                    </div>
                 </div>
-                <div class="explorer">
-                    <div class="explore-grid">
-                        <div class="list"></div>
-                        <div class="top-artists">
-                            <p id="album-of-the-day">Top Artists</p>
-                            <div class="top-artist">
-                                <div class="artist-image"></div>
-                                <div class="artist-name">A-ha</div>
-                            </div>
-                            <div class="top-artist">
-                                <div class="artist-image"></div>
-                                <div class="artist-name">A-ha</div>
-                            </div>
-                            <div class="top-artist">
-                                <div class="artist-image"></div>
-                                <div class="artist-name">A-ha</div>
-                            </div>
-                            <div class="top-artist">
-                                <div class="artist-image"></div>
-                                <div class="artist-name">A-ha</div>
-                            </div>
-                            <div class="top-artist">
-                                <div class="artist-image"></div>
-                                <div class="artist-name">A-ha</div>
+                <div class="top-songs">
+                    <div id="top-songs-inner">
+                        <p class="card-header">Top Songs</p>
+                        <div style="border-radius: 20px;">
+                            <table>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="with-image">
+                                        <div id="top-song-img"></div>
+                                        <div class="title-and-album">
+                                            <p>Worlds away</p>
+                                            <p class="small">Lil Peep</p>
+                                        </div>
+                                    </td>
+                                    <td>Come over when you're sober 1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="with-image">
+                                        <div id="top-song-img"></div>
+                                        <div class="title-and-album">
+                                            <p>Armed and Dangerous</p>
+                                            <p class="small">Juice Wrld</p>
+                                        </div>
+                                    </td>
+                                    <td>Death Race for love</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="with-image">
+                                        <div id="top-song-img"></div>
+                                        <div class="title-and-album">
+                                            <p>The party never ends</p>
+                                            <p class="small">Juice Wrld</p>
+                                        </div>
+                                    </td>
+                                    <td>The party never ends</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="with-image">
+                                        <div id="top-song-img"></div>
+                                        <div class="title-and-album">
+                                            <p>Shots in the dark</p>
+                                            <p class="small">Iann dior, trippie redd</p>
+                                        </div>
+                                    </td>
+                                    <td>Shots in the dark</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="with-image">
+                                        <div id="top-song-img"></div>
+                                        <div class="title-and-album">
+                                            <p>Worlds away</p>
+                                            <p class="small">Lil Peep</p>
+                                        </div>
+                                    </td>
+                                    <td>Come over when you're sober 1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="with-image">
+                                        <div id="top-song-img"></div>
+                                        <div class="title-and-album">
+                                            <p>Worlds away</p>
+                                            <p class="small">Lil Peep</p>
+                                        </div>
+                                    </td>
+                                    <td>Come over when you're sober 1</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="top-songs-right">
+                        <h3 class="card-header">Know your artists</h3>
+                        <div id="artist-info">
+                            <div id="artist-image"></div>
+                            <div id="name-and-other-stuff">
+                                <h1 id="artist-name">Juice Wrld</h1>
+                                <!-- <h3>3 Studio Albums</h3> -->
                             </div>
                         </div>
-                        <div class="stuff"></div>
-                      </div>
+                        <div>
+                            <p id="artist-bio">Jarad Anthony Higgins, known professionally as Juice Wrld, was an American rapper, singer, and songwriter from Chicago, Illinois. His 2018 single "Lucid Dreams" has been played on the music streaming platform Spotify over one billion times and peaked at number two on the Billboard Hot 100.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="extra"></div>
-              </div>
+                <div class="extra">
+                    <div id="wrapper">
+                        <h3 class="card-header">Discover your library</h3>
+                        <div class="discover-small">
+                            <img src="./images/discover/3175d953b668b9ddc807d90e569f27b8.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>BTS</p>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./images/discover/5af901c71a3aaa575be26cd99fc72e12.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>Joji</p>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./images/discover/a4c8317b2b67ee5bf52e0527f8aac524.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>Joji Deluxe</p>
+                        </div>
+                        <div class="discover-medium">
+                            <div class="discover-medium-img"></div>
+                            <div id="gradient"></div>
+                            <div class="description">
+                                <h3>The Kid LAROI</h3>
+                                <p>The Kid Laroi (stylized as The Kid LAROI), is an Australian rapper, singer, and
+                                    songwriter. He originally amassed a small following from his associations with
+                                    rapper Juice WRLD, who mentored him while he was on tour in Australia. </p>
+                            </div>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./Goodbye_&_Good_Riddance_Album_Cover.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>Goodbye and good Riddance</p>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./images/discover/b3bab0b5f503e3ea4ff483e80690ae1e.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>Fuck love 3</p>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./images/discover/3175d953b668b9ddc807d90e569f27b8.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>The kid laroi</p>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./images/discover/de52e1bb51ed2c56bd1e4138acb7f920.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>iann Dior</p>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./images/discover/e7aecf6c485b80a89aaf093fb2562bb4.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>BTS</p>
+                        </div>
+                        <div class="discover-small">
+                            <img src="./aha.jpg" alt="">
+                            <!-- <div class="discover-small-img"></div> -->
+                            <p>A-Ha</p>
+                        </div>
+                        <!-- <div class="discover-medium"><img src="./images/discover/de52e1bb51ed2c56bd1e4138acb7f920.jpg" id="artist-of-the-day"></div> -->
+                    </div>
+
+                    <!-- <div class="discover-large"><img src="./5792.jpg" id="artist-of-the-day"></div> -->
+                    <!-- <img src="./5792.jpg" id="artist-of-the-day"> -->
+                </div>
+            </div>
         </div>
     </div>
 </body>

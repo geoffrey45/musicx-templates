@@ -9,3 +9,19 @@ a {
     color: #fff;
     text-decoration: none;   
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+.card-header {
+    color: inherit;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: .8em;
+    margin-left: 20px;
+    text-transform: capitalize;
+    border-left: solid 2px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
