@@ -56,7 +56,7 @@
     overflow: hidden;
 }
 .discover-medium-img {
-    background-image: url("./images/discover/de52e1bb51ed2c56bd1e4138acb7f920.jpg");
+    background-image: url("./images/discover/627aa1ac69835b1ce2fd302f5144689a.jpg");
     width: 50%;
     height: 100%;
     background-position: left;
@@ -66,7 +66,7 @@
     position: absolute;
 }
 #gradient {
-    background: linear-gradient(to left,rgba(0, 0, 0, 0),30%,#9af8ff, 70%, #a6f8ff);
+    background: linear-gradient(to left,rgba(0, 0, 0, 0),30%,#131313, 70%, #880606);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -83,7 +83,7 @@
     position: relative;
     width: auto;
     height: 200px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border-radius: 20px;
     margin: 10px;
     overflow: hidden;
