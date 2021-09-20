@@ -9,9 +9,16 @@
     height: 97%;
     background-color: #111013;
     border-radius: 20px;
-    overflow: scroll;
+    overflow-y: scroll;
     color: inherit;
 }
+
+.extra #wrapper::-webkit-scrollbar
+{
+	display: none;
+}
+
+
 .extra #wrapper #header {
     /* border: solid; */
     margin-top: 10px;

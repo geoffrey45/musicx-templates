@@ -101,7 +101,7 @@ body {
         "album-art";
     height: 100%;
 }
-  
+
 .album-art {
     grid-area: album-art;
     height: 200px;
@@ -121,7 +121,10 @@ body {
     /* background-color: tomato; */
     height: 100%;
 }
-
+.context::-webkit-scrollbar
+{
+    display: none;
+}
 .album-of-the-day-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 1.5fr;
@@ -182,7 +185,6 @@ body {
     margin: 10px;
     margin-top: 20px;
     display: flex;
-    display: none;
 }
 
 .album-of-the-day {
@@ -213,9 +215,13 @@ body {
     grid-area: songs;
     background-color: #111013;
     border-radius: 20px;
-    overflow: scroll;
+    overflow-x: hidden;
 }
-
+#top-songs-inner::-webkit-scrollbar-track
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 #top-songs-right {
     grid-area: others;
     /* border: solid; */

@@ -16,7 +16,7 @@ table {
     color: #fff;
 }
 td {
-    border-bottom: 1px solid #6868687e;
+    border-top: 1px solid #6868687e;
     text-align: left;
     padding: 8px;
 }
@@ -25,6 +25,10 @@ td {
     font-weight: bolder;
     height: 40px;
     text-align: left;
+}
+#list-item-artist {
+    padding: 0;
+    margin-left: 0;
 }
 
 .top-artists {
@@ -47,7 +51,7 @@ td {
 #top-song-img {
     width: 50px;
     height: 50px;
-    background-image: url(./album.jpg);
+    /* background-image: url(./album.jpg); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
