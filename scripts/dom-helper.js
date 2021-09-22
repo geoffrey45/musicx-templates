@@ -37,6 +37,22 @@ let queue = {
     "current": 0
 }
 
+let prepareArtistView = (artist) => {
+    let artist_header = document.getElementById('artist-header').content.cloneNode(true);
+    album_of_the_day_grid.innerHTML = '';
+    document.getElementById('album-of-the-day-grid').appendChild(artist_header);
+    
+    let artist_albums = document.getElementById('artist-page-albums').content.cloneNode(true);
+    
+    let album_node = document.getElementById('top-songs-right')
+    album_node.style.display = 'unset';
+    top_songs_card.classList = 'top-songs'
+    album_node.innerHTML = '';
+    album_node.appendChild(artist_albums);
+
+    // top_artists_card.style.display = 'none';
+}
+
 let prepareFolderView = () => {
     let album = album_of_the_day.content.cloneNode(true);
     album_of_the_day_grid.innerHTML = '';
@@ -49,13 +65,13 @@ let prepareFolderView = () => {
     folder_header.innerHTML = folder_details['folder_name'];
     album_of_the_day_grid.getElementsByClassName('card-header')[0].innerHTML = 'Folder'
     document.getElementById('album-artist-of-the-day').innerHTML = `${folder_details['count']} Songs`
-    document.getElementById('album-art-of-the-day').style.width = '100%'
+
     document.getElementsByClassName('alb-no')[0].style.display = 'none'
+    top_artists_card.style.display = 'unset';
 };
 
 let printFolders = async () => {
     let folder_dom = document.getElementsByClassName('context')[0]
-    // console.log(folder_dom)
 
     const folders = await getFolders();
     folders.map(folder => {
@@ -63,11 +79,17 @@ let printFolders = async () => {
         folder_item.className = 'folder-item';
 
         let folder_link = document.createElement('a');
-        folder_link.href = `#/f/${folder.url}`;
+        folder_link.href = `#/folder/${folder.url}`;
         folder_link.innerText = folder.name;
         folder_link.setAttribute('type', 'folder')
 
+        let icon = document.createElement('span');
+        icon.classList.add('material-icons', 'material-icons-round');
+        icon.innerText = 'folder';
+
+        folder_item.appendChild(icon)
         folder_item.appendChild(folder_link);
+
         folder_dom.appendChild(folder_item);
     });
     // console.log(`Retrieved ${folders.length} folders`);
@@ -80,7 +102,7 @@ let printSongArtists = (array, element) => {
 
     array.forEach(function (artist, idx, array) {
         let artist_link = document.createElement('a')
-        artist_link.href = encodeURIComponent(artist);
+        artist_link.href = '#/artist/' + encodeURIComponent(artist);
         artist_link.innerHTML = artist;
 
         if (idx !== array.length - 1) {
@@ -121,7 +143,7 @@ let printFiles = async (folder) => {
 
                 // artist.innerText = song.artist
                 title.innerText = song.title
-                title.setAttribute('href', `#/f/${encodeURIComponent(folder_details['name'])}/${song.title}`)
+                title.setAttribute('href', `#/folder/${encodeURIComponent(folder_details['folder_name'])}/${song.title}`)
                 album.innerText = song.album
                 image.style.backgroundImage = `url(${song.image})`
 
@@ -221,8 +243,6 @@ let updateTags = () => {
     let artists = document.getElementById('now-playing-artist')
     let album_art = document.getElementById('now-playing-album-art')
 
-
-
     title.innerText = song['title']
     printSongArtists(song.artists, artists)
     album_art.style.backgroundImage = `url(${song['image']})`
@@ -231,8 +251,11 @@ let updateTags = () => {
 export {
     printFolders,
     printFiles,
+
     prepareFolderView,
     prepareHomeView,
+    prepareArtistView,
+
     playSongById,
     playNextSong,
     playPreviousSong,

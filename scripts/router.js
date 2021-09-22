@@ -1,4 +1,4 @@
-import { printFiles, prepareFolderView, prepareHomeView, playSongById } from './dom-helper.js'
+import { printFiles, prepareFolderView, prepareHomeView, playSongById, prepareArtistView } from './dom-helper.js'
 
 let goToFolderItems = () => {
     prepareFolderView();
@@ -8,9 +8,12 @@ let goToFolderItems = () => {
 let goToHome = () => {
     prepareHomeView();
 }
-function get(){
-    console.log("leggo")
+
+let goToArtist = () => {
+    let name = window.location.hash.split('/')[2];
+    prepareArtistView(decodeURIComponent(name));
 }
+
 let playSong = () => {
     // prepareFolderView();
     // printFiles(window.location.hash.split('/')[2]);
@@ -43,6 +46,10 @@ template('home', () => {
     goToHome();
 });
 
+template('artist', () => {
+    goToArtist();
+})
+
 // template('folder', () => {
 //     goToFolder();
 // });
@@ -68,16 +75,25 @@ let router = (evt) => {
     let url = urlq.slice(1) || '/';
     let type = urlq.split('/')[1];
         
-    if (type == "f"){
+    if (type == "folder"){
         let folder_id = urlq.split('/')[2];
+        console.log(folder_id)
         let song_id = urlq.split('/')[3];
 
         if (folder_id) {
-            route('/f/' + folder_id, 'folder')
+            route('/folder/' + folder_id, 'folder')
         }
 
         if (song_id) {
-            route('/f/'+ folder_id + '/' + song_id, 'play')
+            route('/folder/'+ folder_id + '/' + song_id, 'play')
+        }
+    }
+    else if (type == "artist"){
+        let artist_id = urlq.split('/')[2];
+        console.log(artist_id)
+
+        if (artist_id) {
+            route('/artist/' + urlq.split('/')[2], 'artist')
         }
     }
 

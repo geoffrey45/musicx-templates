@@ -1,13 +1,13 @@
 #top-artist {
-    margin-left: 20px;
-    width: 100px;
+    margin-left: 10px;
+    width: 110px;
     text-align: center;
     font-weight: bold;
     font-size: .7em;
     float: left;
-
+    /* border: solid 1px #ccc; */
 }
-#artist-image {
+.top-artists #artist-image {
     width: 100px;
     height: 100px;
     background-color: #111013;
@@ -19,7 +19,7 @@
 }
 
 #artist-name {
-    margin-top: 5px;
+    margin-top: 0px;
     color: #fff;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -29,7 +29,7 @@
 .top-artists .card-header {
     color: #fff;
     height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .top-artists {

@@ -60,6 +60,7 @@ let updateProgress = (length) => {
         let percentage = (audio.currentTime / length) * 1000;
         progress_bar.value = percentage
     });
+    
 }
 
 export {

@@ -218,8 +218,6 @@ body {
     background-color: rgba(212, 58, 91, 0.267);
 }
 
-
-
 #seek-bar::-webkit-slider-thumb {
     height: 10px;
     width: 10px;

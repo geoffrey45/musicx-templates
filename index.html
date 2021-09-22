@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cwilvx Music</title>
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="bottom-bar.css">
     <link rel="stylesheet" href="topbar.css">
@@ -17,47 +17,13 @@
     <link rel="stylesheet" href="./artist-of-the-day.css">
     <link rel="stylesheet" href="./know-your-artists.css">
     <link rel="stylesheet" href="./folder-items.css">
+    <link rel="stylesheet" href="./css/artist-header.css">
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 </head>
 
 <body>
     <style>
-        @font-face {
-            font-family: 'Material Icons';
-            font-style: normal;
-            font-weight: 400;
-            src: url(./fonts/MaterialIconsRound-Regular.woff);
-            /* For IE6-8 */
-            src: local('Material Icons'),
-                local('MaterialIcons-Regular'),
-                url("./fonts/MaterialIconsRound-Regular.woff") format('woff'),
-        }
 
-        .material-icons {
-            font-family: 'Material Icons';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;
-            /* Preferred icon size */
-            display: inline-block;
-            line-height: 1;
-            text-transform: none;
-            letter-spacing: normal;
-            word-wrap: normal;
-            white-space: nowrap;
-            direction: ltr;
-
-            /* Support for all WebKit browsers. */
-            -webkit-font-smoothing: antialiased;
-            /* Support for Safari and Chrome. */
-            text-rendering: optimizeLegibility;
-
-            /* Support for Firefox. */
-            -moz-osx-font-smoothing: grayscale;
-
-            /* Support for IE. */
-            font-feature-settings: 'liga';
-        }
     </style>
     <div class="container">
         <div class="top">
@@ -133,7 +99,7 @@
                         </a>
                     </div>
                     <div id="library-button" class="button">
-                        <a href="#">
+                        <a href="#/artist/Juice WRLD">
                             <i class="material-icons material-icons-round">library_music</i>
                             Library
                         </a>
@@ -151,6 +117,30 @@
                 <h3>cwilvx music</h3>
             </div> -->
         </div>
+        <template id="artist-header">
+            <div class="discover-medium" id="header-container">
+
+                <div class="discover-medium-img" id="artist-header-img"></div>
+                <div id="gradient" class="artist-header-gradient"></div>
+                <div class="description" id="artist-header-description">
+                    <p id="artist-header-artist-name">Juice WRLD</p>
+                    <p id="artist-header-info">Born in Florida, Jenevieve is a 22-year-old singer and songwriter with Cuban & Bahamian roots. She was raised in Miami, where she has a history in dance through her grandmother and mother who were both ballet dancers.</p>
+                    <div id="artist-header-buttons">
+                        <a href="#">
+                            <span class="material-icons material-icons-round">play_arrow</span>
+                            Play
+                        </a>
+                        <a href="#">
+                            <span class="material-icons material-icons-round" id="radio-icon">radio</span>Play Artist
+                            Radio
+                        </a>
+                        <a href="#">
+                            <span class="material-icons material-icons-round">favorite_border</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </template>
         <div class="content">
             <template id="top-artists-item">
                 <div id="top-artist">
@@ -187,6 +177,7 @@
 
                         </div>
                     </template>
+
                 </div>
                 <div class="top-songs">
                     <div id="top-songs-inner">
@@ -211,6 +202,36 @@
                             </table>
                         </div>
                     </div>
+                    <template id="artist-page-albums">
+                        <h3 class="card-header">Artist Albums</h3>
+                        <div id="single-artist-albumx">
+                            <div class="album-art"></div>
+                            <div class="album-title">
+                                <h3><a href="#/album/album">Legends never die</a></h3>
+                                <div class="album-info">
+                                    <p>24 Tracks🔹 56 Minutes</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="single-artist-albumx">
+                            <div class="album-art"></div>
+                            <div class="album-title">
+                                <h3><a href="#/album/album">Legends never die</a></h3>
+                                <div class="album-info">
+                                    <p>24 Tracks🔹 56 Minutes</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="single-artist-albumx">
+                            <div class="album-art"></div>
+                            <div class="album-title">
+                                <a href="#/album/album">Legends never die</a>
+                            </div>
+                        </div>
+
+                    </template>
                     <div id="top-songs-right">
                         <h3 class="card-header">Know your artists</h3>
                         <div id="artist-info">

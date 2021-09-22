@@ -15,6 +15,7 @@
 .button a i {
     margin-right: 10px;
 }
+
 #home-button {
     top: 0px;
     width: 100%;
@@ -34,14 +35,23 @@
     text-align: left;
     margin: 10px;
     color: #fff;
-    display: block !important;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 4px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 .folder-item a {
     color: #fff;
     text-decoration: none;
+    margin-left: 5px;
+}
+.folder-item span {
+    color: rgb(77, 77, 77);
+}
+
+.folder-item:hover {
+    background-color: rgba(70, 70, 70, 0.61);
 }
