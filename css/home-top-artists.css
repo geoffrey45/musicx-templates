@@ -1,5 +1,10 @@
+#folder-artists {
+    padding-left: 20px;
+}
+
 #top-artist {
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    margin-bottom: 100px;
     width: 110px;
     text-align: center;
     font-weight: bold;
@@ -16,14 +21,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 5px !important;
 }
 
 #artist-name {
-    margin-top: 0px;
     color: #fff;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+    margin-left: -10px;
+    /* border: solid 1px #ccc; */
+    /* text-align: right; */
+    /* position: absolute; */
+    /* white-space: nowrap ;
+    overflow-x: hidden;
+    text-overflow: ellipsis; */
 }
 
 .top-artists .card-header {

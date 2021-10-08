@@ -2,11 +2,11 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: url(./fonts/MaterialIconsRound-Regular.woff);
+    src: url(../fonts/MaterialIconsRound-Regular.woff);
     /* For IE6-8 */
     src: local('Material Icons'),
         local('MaterialIcons-Regular'),
-        url("./fonts/MaterialIconsRound-Regular.woff") format('woff'),
+        /* url("../fonts/MaterialIconsRound-Regular.woff") format('woff'), */
 }
 :root {
     --blue: rgb(13, 86, 180);

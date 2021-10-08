@@ -1,4 +1,4 @@
-import { printFiles, prepareFolderView, prepareHomeView, playSongById, prepareArtistView } from './dom-helper.js'
+import { printFiles, prepareFolderView, prepareHomeView, playSongById, prepareArtistView, printArtist, playlist } from './dom-helper.js'
 
 let goToFolderItems = () => {
     prepareFolderView();
@@ -11,16 +11,21 @@ let goToHome = () => {
 
 let goToArtist = () => {
     let name = window.location.hash.split('/')[2];
-    prepareArtistView(decodeURIComponent(name));
+    prepareArtistView();
+    printArtist(decodeURIComponent(name))
 }
 
-let playSong = () => {
-    // prepareFolderView();
-    // printFiles(window.location.hash.split('/')[2]);
 
+let playSong = () => {
     let song_id = window.location.hash.split('/')[3];
-    playSongById(decodeURIComponent(song_id));
-    
+    let type = window.location.hash.split('/')[1];
+    let type_name = window.location.hash.split('/')[2];
+
+    if (playlist.songs.length == 0) {
+        printFiles(window.location.hash.split('/')[2]);
+    }
+
+    playSongById(decodeURIComponent(song_id), decodeURIComponent(type), decodeURIComponent(type_name));
 };
 
 let routes = {};
@@ -69,6 +74,7 @@ let resolveRoute = (path) => {
         throw new Error(`Route ${path} not found`);
     };
 };
+
 let router = (evt) => {
     const urlq = window.location.hash;
 
@@ -77,7 +83,6 @@ let router = (evt) => {
         
     if (type == "folder"){
         let folder_id = urlq.split('/')[2];
-        console.log(folder_id)
         let song_id = urlq.split('/')[3];
 
         if (folder_id) {

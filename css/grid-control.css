@@ -154,8 +154,8 @@ body {
 
 .home-grid {
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 0.1fr 1.9fr 0.1fr;
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-rows: 0.5fr 1.9fr 0.1fr;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 0px 0px;
@@ -188,6 +188,8 @@ body {
 
 .album-of-the-day {
     grid-area: menu;
+    height: 300px;
+    /* border: solid; */
 }
 
 .top-songs{

@@ -6,3 +6,5 @@ printFolders();
 document.getElementById("skip-previous").addEventListener("click", playPreviousSong);
 document.getElementById("skip-next").addEventListener("click", playNextSong);
 document.getElementById("play-pause").addEventListener("click", playPause);
+
+

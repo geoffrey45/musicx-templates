@@ -81,7 +81,7 @@ body {
         height: 50px;
         border-radius: 10px;
         background-color: #196cda9d;
-        background-image: url('./album.jpg');
+        background-image: url('../album.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }

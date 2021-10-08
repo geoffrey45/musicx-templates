@@ -25,7 +25,7 @@
     width: 180px;
     height: 180px;
     border-radius: 10px;
-    background-image: url('./album.jpg');
+    background-image: url('../album.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

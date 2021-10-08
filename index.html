@@ -6,25 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cwilvx Music</title>
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="bottom-bar.css">
-    <link rel="stylesheet" href="topbar.css">
-    <link rel="stylesheet" href="grid-control.css">
-    <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="album-of-the-day.css">
-    <link rel="stylesheet" href="home-top-artists.css">
-    <link rel="stylesheet" href="./top-tracks.css">
-    <link rel="stylesheet" href="./artist-of-the-day.css">
-    <link rel="stylesheet" href="./know-your-artists.css">
-    <link rel="stylesheet" href="./folder-items.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/bottom-bar.css">
+    <link rel="stylesheet" href="./css/topbar.css">
+    <link rel="stylesheet" href="./css/grid-control.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/album-of-the-day.css">
+    <link rel="stylesheet" href="./css/home-top-artists.css">
+    <link rel="stylesheet" href="./css/top-tracks.css">
+    <link rel="stylesheet" href="./css/artist-of-the-day.css">
+    <link rel="stylesheet" href="./css/know-your-artists.css">
+    <link rel="stylesheet" href="./css/folder-items.css">
     <link rel="stylesheet" href="./css/artist-header.css">
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 </head>
 
 <body>
-    <style>
-
-    </style>
     <div class="container">
         <div class="top">
             <div class="top-grid">
@@ -124,7 +121,9 @@
                 <div id="gradient" class="artist-header-gradient"></div>
                 <div class="description" id="artist-header-description">
                     <p id="artist-header-artist-name">Juice WRLD</p>
-                    <p id="artist-header-info">Born in Florida, Jenevieve is a 22-year-old singer and songwriter with Cuban & Bahamian roots. She was raised in Miami, where she has a history in dance through her grandmother and mother who were both ballet dancers.</p>
+                    <p id="artist-header-info">Jarad Anthony Higgins, known professionally as Juice Wrld, was an American rapper, singer, and songwriter from Chicago, Illinois. His 2018 single "Lucid Dreams" has been played on the music streaming platform Spotify over one billion times and peaked at number two on the Billboard Hot 100.
+                        <br><br>
+                    His most successful singles express melodic, emo-inspired compositions that exhibit his songwriting skill. His songs harbor melodic flows to complement their melancholic subjects.</p>
                     <div id="artist-header-buttons">
                         <a href="#">
                             <span class="material-icons material-icons-round">play_arrow</span>
@@ -145,7 +144,7 @@
             <template id="top-artists-item">
                 <div id="top-artist">
                     <div id="artist-image"></div>
-                    <div id="artist-name"></div>
+                    <a id="artist-name"></a>
                 </div>
             </template>
             <div class="home-grid" id="home-grid">
@@ -181,7 +180,7 @@
                 </div>
                 <div class="top-songs">
                     <div id="top-songs-inner">
-                        <p class="card-header">Top Songs</p>
+                        <p class="card-header"></p>
                         <div>
                             <template id="list-item">
                                 <tr>
